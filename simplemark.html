@@ -1,0 +1,31 @@
+<div ng-controller="rhs.simplemarkcontroller">
+   <div class="featuresGhost">
+        <section id="editor_{{model.alias}}" class="editorGhost">
+            <div class="outer" ng-class="{colorOff: model.config.coloredSyntax==false}">
+                <div class="editorwrap">
+	                <section class="entry-markdown">
+		                <header class="floatingheader">
+			                Markdown 
+		                </header>
+		                <section class="entry-markdown-content">
+                        <textarea ng-model="model.value">
+    
+                        </textarea>
+		                </section>
+	                </section>
+	                <section class="entry-preview active">
+		                <header class="floatingheader">
+			                Preview <span class="entry-word-count">0 words</span>
+		                </header>
+		                <section class="entry-preview-content">
+			                <div class="rendered-markdown"></div>
+		                </section>
+	                </section>
+                </div>
+                <!--<input type="button" value="Insert image" class="btn" ng-click="insertImage()" />-->
+                <div id="simpleMarkImg"><a ng-click="insertImage()"><i class="icon-picture"></i> Insert image</a></div>
+            </div>
+        </section>
+    </div>
+ </div>
+

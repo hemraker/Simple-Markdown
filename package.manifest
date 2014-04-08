@@ -1,0 +1,51 @@
+{
+    propertyEditors: [
+        {
+            name: "Simple Markdown Editor",
+            alias: "rhs.simplemark",
+            editor: {
+                view: "~/app_plugins/simplemark/simplemark.html"
+            },
+            prevalues: {
+                fields: [
+                    {
+                        label: "Colored Syntax",
+                        description: "Toggle colored syntax",
+                        key: "coloredSyntax",
+                        view: "boolean"
+                    },
+                    {
+                        label: "Default value",
+                        description: "If value is blank, the editor will show this",
+                        key: "defaultValue",
+                        view: "textarea"
+                    }
+                ]
+            },
+            defaultConfig: {
+                defaultValue: "#Simple Markdown
+
+####A clean, simple markdown editor for Umbraco v7+
+
+`Because markdown should look pretty`
+
+created with the [Ghost Markdown Editor](http:https:\/\/github.com/timsayshey)
+
+Bulletpoints:
+
+* Syntax coloring (optional)
+* Live preview
+* Upload or insert images from Media
+
+---
+#####Pro tip: Grab the MarkdownHelper from NuGet
+
+		@Html.Markdown(Umbraco.Field(propertyAlias).ToString())"
+            }
+        }
+    ],
+
+    javascript:[
+        "~/app_plugins/simplemark/simplemark.controller.js"
+    ]
+}
